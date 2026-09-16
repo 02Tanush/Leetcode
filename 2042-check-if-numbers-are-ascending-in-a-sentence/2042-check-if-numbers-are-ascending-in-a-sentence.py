@@ -2,9 +2,9 @@ class Solution:
     def areNumbersAscending(self, s: str) -> bool:
         prev_num = -1
         
-        for token in s.split():
-            if token.isdigit():
-                curr_num = int(token)
+        for i in s.split():
+            if i.isdigit():
+                curr_num = int(i)
                 if curr_num <= prev_num:
                     return False
                 prev_num = curr_num
