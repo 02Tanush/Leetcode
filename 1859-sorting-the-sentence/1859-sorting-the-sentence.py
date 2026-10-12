@@ -1,6 +1,6 @@
 class Solution:
     def sortSentence(self, s: str) -> str:
-        arr=[]
+        """"arr=[]
         words=list(s.split())
         count=1
         i=0
@@ -12,5 +12,14 @@ class Solution:
                 i=0
             else:
                 i+=1
+        return " ".join(arr)"""
+
+        words=list(s.split())
+        arr=[""]*len(words)
+
+        for word in words:
+            index=int(word[-1])-1
+            arr[index]=word[:-1]
+        
         return " ".join(arr)
         
